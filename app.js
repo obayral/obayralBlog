@@ -6,7 +6,7 @@ var path = require('path');
 
 app.set('view engine','ejs');
 app.use(route);
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname + '/public'));
 app.listen(PORT,function(){
     console.log("Server is listening at " + PORT ); 
 });
