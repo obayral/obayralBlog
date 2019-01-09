@@ -106,3 +106,18 @@
 .body{
     background-color: #a58e7c
 }
+
+.spacer {
+  margin-left: 160px;
+}
+
+.footer {
+  margin-right: 100px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
