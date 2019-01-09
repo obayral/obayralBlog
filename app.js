@@ -17,9 +17,7 @@ mongoose.connect(config.database, { useNewUrlParser: true }, (err) => {
       console.log("Connection Sucessful");
   }
 });
-app.get('/',function(req,res){
-  res.render('home');
-});
+
 app.use(bodyparser.urlencoded({ extended: true }));
 app.set('view engine','ejs');
 app.use(expressValidator());
