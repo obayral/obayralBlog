@@ -5,7 +5,7 @@ var bodyparser = require('body-parser');
 var app = express();
 var PORT = process.env.PORT || 3000;
 var route = require('./routes/routes');
-var path = require('path');
+const path = require('path');
 const config = require('./config/database');
 
 
