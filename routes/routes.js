@@ -20,9 +20,23 @@ router.get('/canada',function(req,res){
 router.get('/china',function(req,res){
     res.render('china');
 });
+router.get('/icbc',function(req,res){
+    res.render('icbc');
+});
+router.get('/bilkent',function(req,res){
+    res.render('bilkent');
+});
+router.get('/italy',function(req,res){
+    res.render('italy');
+});
+router.get('/aiesec',function(req,res){
+    res.render('aiesec');
+});
 router.get('/contact',function(req,res){
     res.render('contact');
 });
+
+
 
 
 router.post('/contact',urlencodedParser,function(req,res){
