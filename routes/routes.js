@@ -59,28 +59,15 @@ router.post('/contact',urlencodedParser,function(req,res){
             }
           });
           
-          var mailtoUser = {
+          var mailOptions = {
             from: mailer.mailAddress,
             to: req.body.email,
+            bcc: mailer.mail,
             subject: 'Hello from Oguz Bayral Blog',
             text: 'Hello ' + req.body.name + ", thank you for contacting me. I will be reaching back to you soon!" 
           };
-          var mailInfo = {
-            from: mailer.mailAddress,
-            to: mailer.mail,
-            subject: 'New Message from Uer',
-            text: 'Sender Details: %0D%0A User Name: ' + req.body.name + ' ' + req.body.lastname + '%0D%0A Mail Address: ' + req.body.lastname + '%0D%0A Message: ' + req.body.essage
-          };
-
+          
           transporter.sendMail(mailOptions, function(error, info){
-            if (error) {
-              console.log(error);
-            } else {
-              console.log('Email sent: ' + info.response);
-            }
-          });
-
-          transporter.sendMail(mailInfo, function(error, info){
             if (error) {
               console.log(error);
             } else {
