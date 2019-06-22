@@ -24,6 +24,7 @@ router.get('/icbc',function(req,res){
     res.render('icbc');
 });
 router.get('/bilkent',function(req,res){
+    console.log("zaaaaa bilkent");
     res.render('bilkent');
 });
 router.get('/italy',function(req,res){
@@ -35,7 +36,10 @@ router.get('/aiesec',function(req,res){
 router.get('/contact',function(req,res){
     res.render('contact');
 });
-
+router.get('/sitemap.xml',function(req,res){
+    console.log("aassaa");
+    res.get('sitemap.xml');
+});
 
 
 
